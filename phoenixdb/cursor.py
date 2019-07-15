@@ -136,7 +136,6 @@ class Cursor(object):
             return
 
         for column in signature.columns:
-            print(column)
             dtype = TypeHelper.from_class(column.column_class_name)
             self._column_data_types.append(dtype)
 

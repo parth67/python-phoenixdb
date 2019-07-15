@@ -15,7 +15,6 @@
 """Implementation of the JSON-over-HTTP RPC protocol used by Avatica."""
 
 import re
-import sys
 import socket
 import pprint
 import math
@@ -43,6 +42,7 @@ __all__ = ['AvaticaClient']
 
 logger = logging.getLogger(__name__)
 
+MAX_INT = 2 ** 64 - 1
 
 class JettyErrorPageParser(HTMLParser):
 
@@ -398,7 +398,7 @@ class AvaticaClient(object):
         request.connection_id = connection_id
         request.statement_id = statement_id
         request.sql = sql
-        request.max_row_count = sys.maxint if max_rows_total is None else max_rows_total
+        request.max_row_count = MAX_INT if max_rows_total is None else max_rows_total
         #if max_rows_total is not None:
             #request.max_rows_total = max_rows_total
             #request.max_row_count = max_rows_total
@@ -429,7 +429,7 @@ class AvaticaClient(object):
         request = requests_pb2.PrepareRequest()
         request.connection_id = connection_id
         request.sql = sql
-        request.max_row_count = sys.maxint if max_rows_total is None else max_rows_total
+        request.max_row_count = MAX_INT if max_rows_total is None else max_rows_total
 
         response_data = self._apply(request)
         response = responses_pb2.PrepareResponse()
@@ -469,7 +469,7 @@ class AvaticaClient(object):
             request.parameter_values.extend(parameter_values)
             request.has_parameter_values = True
         
-        request.max_row_count = sys.maxint if max_rows_total is None else max_rows_total
+        request.max_row_count = MAX_INT if max_rows_total is None else max_rows_total
 
         #if first_frame_max_size is not None:
         #    request.deprecated_first_frame_max_size = first_frame_max_size
