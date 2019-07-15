@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -20,10 +19,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='requests.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0erequests.proto\x1a\x0c\x63ommon.proto\"(\n\x0f\x43\x61talogsRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"0\n\x17\x44\x61tabasePropertyRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"P\n\x0eSchemasRequest\x12\x0f\n\x07\x63\x61talog\x18\x01 \x01(\t\x12\x16\n\x0eschema_pattern\x18\x02 \x01(\t\x12\x15\n\rconnection_id\x18\x03 \x01(\t\"\x95\x01\n\rTablesRequest\x12\x0f\n\x07\x63\x61talog\x18\x01 \x01(\t\x12\x16\n\x0eschema_pattern\x18\x02 \x01(\t\x12\x1a\n\x12table_name_pattern\x18\x03 \x01(\t\x12\x11\n\ttype_list\x18\x04 \x03(\t\x12\x15\n\rhas_type_list\x18\x06 \x01(\x08\x12\x15\n\rconnection_id\x18\x07 \x01(\t\"*\n\x11TableTypesRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"\x89\x01\n\x0e\x43olumnsRequest\x12\x0f\n\x07\x63\x61talog\x18\x01 \x01(\t\x12\x16\n\x0eschema_pattern\x18\x02 \x01(\t\x12\x1a\n\x12table_name_pattern\x18\x03 \x01(\t\x12\x1b\n\x13\x63olumn_name_pattern\x18\x04 \x01(\t\x12\x15\n\rconnection_id\x18\x05 \x01(\t\"(\n\x0fTypeInfoRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"\xa1\x01\n\x18PrepareAndExecuteRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x0b\n\x03sql\x18\x02 \x01(\t\x12\x15\n\rmax_row_count\x18\x03 \x01(\x04\x12\x14\n\x0cstatement_id\x18\x04 \x01(\r\x12\x16\n\x0emax_rows_total\x18\x05 \x01(\x03\x12\x1c\n\x14\x66irst_frame_max_size\x18\x06 \x01(\x05\"c\n\x0ePrepareRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x0b\n\x03sql\x18\x02 \x01(\t\x12\x15\n\rmax_row_count\x18\x03 \x01(\x04\x12\x16\n\x0emax_rows_total\x18\x04 \x01(\x03\"\x80\x01\n\x0c\x46\x65tchRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\x12\x0e\n\x06offset\x18\x03 \x01(\x04\x12\x1b\n\x13\x66\x65tch_max_row_count\x18\x04 \x01(\r\x12\x16\n\x0e\x66rame_max_size\x18\x05 \x01(\x05\"/\n\x16\x43reateStatementRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"D\n\x15\x43loseStatementRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\"\x8b\x01\n\x15OpenConnectionRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12.\n\x04info\x18\x02 \x03(\x0b\x32 .OpenConnectionRequest.InfoEntry\x1a+\n\tInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"/\n\x16\x43loseConnectionRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"Y\n\x15\x43onnectionSyncRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12)\n\nconn_props\x18\x02 \x01(\x0b\x32\x15.ConnectionProperties\"\xc7\x01\n\x0e\x45xecuteRequest\x12)\n\x0fstatementHandle\x18\x01 \x01(\x0b\x32\x10.StatementHandle\x12%\n\x10parameter_values\x18\x02 \x03(\x0b\x32\x0b.TypedValue\x12\'\n\x1f\x64\x65precated_first_frame_max_size\x18\x03 \x01(\x04\x12\x1c\n\x14has_parameter_values\x18\x04 \x01(\x08\x12\x1c\n\x14\x66irst_frame_max_size\x18\x05 \x01(\x05\"m\n\x12SyncResultsRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\x12\x1a\n\x05state\x18\x03 \x01(\x0b\x32\x0b.QueryState\x12\x0e\n\x06offset\x18\x04 \x01(\x04\"&\n\rCommitRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"(\n\x0fRollbackRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"b\n\x1dPrepareAndExecuteBatchRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\x12\x14\n\x0csql_commands\x18\x03 \x03(\t\"4\n\x0bUpdateBatch\x12%\n\x10parameter_values\x18\x01 \x03(\x0b\x32\x0b.TypedValue\"a\n\x13\x45xecuteBatchRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\x12\x1d\n\x07updates\x18\x03 \x03(\x0b\x32\x0c.UpdateBatchB\"\n org.apache.calcite.avatica.protob\x06proto3')
+  serialized_options=_b('\n org.apache.calcite.avatica.proto'),
+  serialized_pb=_b('\n\x0erequests.proto\x1a\x0c\x63ommon.proto\"(\n\x0f\x43\x61talogsRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"0\n\x17\x44\x61tabasePropertyRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"P\n\x0eSchemasRequest\x12\x0f\n\x07\x63\x61talog\x18\x01 \x01(\t\x12\x16\n\x0eschema_pattern\x18\x02 \x01(\t\x12\x15\n\rconnection_id\x18\x03 \x01(\t\"\x95\x01\n\rTablesRequest\x12\x0f\n\x07\x63\x61talog\x18\x01 \x01(\t\x12\x16\n\x0eschema_pattern\x18\x02 \x01(\t\x12\x1a\n\x12table_name_pattern\x18\x03 \x01(\t\x12\x11\n\ttype_list\x18\x04 \x03(\t\x12\x15\n\rhas_type_list\x18\x06 \x01(\x08\x12\x15\n\rconnection_id\x18\x07 \x01(\t\"*\n\x11TableTypesRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"\x89\x01\n\x0e\x43olumnsRequest\x12\x0f\n\x07\x63\x61talog\x18\x01 \x01(\t\x12\x16\n\x0eschema_pattern\x18\x02 \x01(\t\x12\x1a\n\x12table_name_pattern\x18\x03 \x01(\t\x12\x1b\n\x13\x63olumn_name_pattern\x18\x04 \x01(\t\x12\x15\n\rconnection_id\x18\x05 \x01(\t\"(\n\x0fTypeInfoRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"k\n\x18PrepareAndExecuteRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x0b\n\x03sql\x18\x02 \x01(\t\x12\x15\n\rmax_row_count\x18\x03 \x01(\x04\x12\x14\n\x0cstatement_id\x18\x04 \x01(\r\"K\n\x0ePrepareRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x0b\n\x03sql\x18\x02 \x01(\t\x12\x15\n\rmax_row_count\x18\x03 \x01(\x04\"h\n\x0c\x46\x65tchRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\x12\x0e\n\x06offset\x18\x03 \x01(\x04\x12\x1b\n\x13\x66\x65tch_max_row_count\x18\x04 \x01(\r\"/\n\x16\x43reateStatementRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"D\n\x15\x43loseStatementRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\"\x8b\x01\n\x15OpenConnectionRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12.\n\x04info\x18\x02 \x03(\x0b\x32 .OpenConnectionRequest.InfoEntry\x1a+\n\tInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"/\n\x16\x43loseConnectionRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"Y\n\x15\x43onnectionSyncRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12)\n\nconn_props\x18\x02 \x01(\x0b\x32\x15.ConnectionProperties\"\x97\x01\n\x0e\x45xecuteRequest\x12)\n\x0fstatementHandle\x18\x01 \x01(\x0b\x32\x10.StatementHandle\x12%\n\x10parameter_values\x18\x02 \x03(\x0b\x32\x0b.TypedValue\x12\x15\n\rmax_row_count\x18\x03 \x01(\x04\x12\x1c\n\x14has_parameter_values\x18\x04 \x01(\x08\"m\n\x12SyncResultsRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\x12\x1a\n\x05state\x18\x03 \x01(\x0b\x32\x0b.QueryState\x12\x0e\n\x06offset\x18\x04 \x01(\x04\"&\n\rCommitRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\t\"(\n\x0fRollbackRequest\x12\x15\n\rconnection_id\x18\x01 \x01(\tB\"\n org.apache.calcite.avatica.protob\x06proto3')
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -41,14 +40,14 @@ _CATALOGSREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -72,14 +71,14 @@ _DATABASEPROPERTYREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -103,28 +102,28 @@ _SCHEMASREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='schema_pattern', full_name='SchemasRequest.schema_pattern', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='connection_id', full_name='SchemasRequest.connection_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -148,49 +147,49 @@ _TABLESREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='schema_pattern', full_name='TablesRequest.schema_pattern', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='table_name_pattern', full_name='TablesRequest.table_name_pattern', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='type_list', full_name='TablesRequest.type_list', index=3,
       number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='has_type_list', full_name='TablesRequest.has_type_list', index=4,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='connection_id', full_name='TablesRequest.connection_id', index=5,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -214,14 +213,14 @@ _TABLETYPESREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -245,42 +244,42 @@ _COLUMNSREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='schema_pattern', full_name='ColumnsRequest.schema_pattern', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='table_name_pattern', full_name='ColumnsRequest.table_name_pattern', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='column_name_pattern', full_name='ColumnsRequest.column_name_pattern', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='connection_id', full_name='ColumnsRequest.connection_id', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -304,14 +303,14 @@ _TYPEINFOREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -335,56 +334,42 @@ _PREPAREANDEXECUTEREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='sql', full_name='PrepareAndExecuteRequest.sql', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='max_row_count', full_name='PrepareAndExecuteRequest.max_row_count', index=2,
       number=3, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='statement_id', full_name='PrepareAndExecuteRequest.statement_id', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='max_rows_total', full_name='PrepareAndExecuteRequest.max_rows_total', index=4,
-      number=5, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='first_frame_max_size', full_name='PrepareAndExecuteRequest.first_frame_max_size', index=5,
-      number=6, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=585,
-  serialized_end=746,
+  serialized_start=584,
+  serialized_end=691,
 )
 
 
@@ -401,42 +386,35 @@ _PREPAREREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='sql', full_name='PrepareRequest.sql', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='max_row_count', full_name='PrepareRequest.max_row_count', index=2,
       number=3, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='max_rows_total', full_name='PrepareRequest.max_rows_total', index=3,
-      number=4, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=748,
-  serialized_end=847,
+  serialized_start=693,
+  serialized_end=768,
 )
 
 
@@ -453,49 +431,42 @@ _FETCHREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='statement_id', full_name='FetchRequest.statement_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='offset', full_name='FetchRequest.offset', index=2,
       number=3, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='fetch_max_row_count', full_name='FetchRequest.fetch_max_row_count', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='frame_max_size', full_name='FetchRequest.frame_max_size', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=850,
-  serialized_end=978,
+  serialized_start=770,
+  serialized_end=874,
 )
 
 
@@ -512,21 +483,21 @@ _CREATESTATEMENTREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=980,
-  serialized_end=1027,
+  serialized_start=876,
+  serialized_end=923,
 )
 
 
@@ -543,28 +514,28 @@ _CLOSESTATEMENTREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='statement_id', full_name='CloseStatementRequest.statement_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1029,
-  serialized_end=1097,
+  serialized_start=925,
+  serialized_end=993,
 )
 
 
@@ -581,28 +552,28 @@ _OPENCONNECTIONREQUEST_INFOENTRY = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='value', full_name='OpenConnectionRequest.InfoEntry.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  serialized_options=_b('8\001'),
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1196,
-  serialized_end=1239,
+  serialized_start=1092,
+  serialized_end=1135,
 )
 
 _OPENCONNECTIONREQUEST = _descriptor.Descriptor(
@@ -618,28 +589,28 @@ _OPENCONNECTIONREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='info', full_name='OpenConnectionRequest.info', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[_OPENCONNECTIONREQUEST_INFOENTRY, ],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1100,
-  serialized_end=1239,
+  serialized_start=996,
+  serialized_end=1135,
 )
 
 
@@ -656,21 +627,21 @@ _CLOSECONNECTIONREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1241,
-  serialized_end=1288,
+  serialized_start=1137,
+  serialized_end=1184,
 )
 
 
@@ -687,28 +658,28 @@ _CONNECTIONSYNCREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='conn_props', full_name='ConnectionSyncRequest.conn_props', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1290,
-  serialized_end=1379,
+  serialized_start=1186,
+  serialized_end=1275,
 )
 
 
@@ -725,49 +696,42 @@ _EXECUTEREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='parameter_values', full_name='ExecuteRequest.parameter_values', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='deprecated_first_frame_max_size', full_name='ExecuteRequest.deprecated_first_frame_max_size', index=2,
+      name='max_row_count', full_name='ExecuteRequest.max_row_count', index=2,
       number=3, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='has_parameter_values', full_name='ExecuteRequest.has_parameter_values', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='first_frame_max_size', full_name='ExecuteRequest.first_frame_max_size', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1382,
-  serialized_end=1581,
+  serialized_start=1278,
+  serialized_end=1429,
 )
 
 
@@ -784,42 +748,42 @@ _SYNCRESULTSREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='statement_id', full_name='SyncResultsRequest.statement_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='state', full_name='SyncResultsRequest.state', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='offset', full_name='SyncResultsRequest.offset', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1583,
-  serialized_end=1692,
+  serialized_start=1431,
+  serialized_end=1540,
 )
 
 
@@ -836,21 +800,21 @@ _COMMITREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1694,
-  serialized_end=1732,
+  serialized_start=1542,
+  serialized_end=1580,
 )
 
 
@@ -867,142 +831,21 @@ _ROLLBACKREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1734,
-  serialized_end=1774,
-)
-
-
-_PREPAREANDEXECUTEBATCHREQUEST = _descriptor.Descriptor(
-  name='PrepareAndExecuteBatchRequest',
-  full_name='PrepareAndExecuteBatchRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='connection_id', full_name='PrepareAndExecuteBatchRequest.connection_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='statement_id', full_name='PrepareAndExecuteBatchRequest.statement_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sql_commands', full_name='PrepareAndExecuteBatchRequest.sql_commands', index=2,
-      number=3, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1776,
-  serialized_end=1874,
-)
-
-
-_UPDATEBATCH = _descriptor.Descriptor(
-  name='UpdateBatch',
-  full_name='UpdateBatch',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='parameter_values', full_name='UpdateBatch.parameter_values', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1876,
-  serialized_end=1928,
-)
-
-
-_EXECUTEBATCHREQUEST = _descriptor.Descriptor(
-  name='ExecuteBatchRequest',
-  full_name='ExecuteBatchRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='connection_id', full_name='ExecuteBatchRequest.connection_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='statement_id', full_name='ExecuteBatchRequest.statement_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='updates', full_name='ExecuteBatchRequest.updates', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1930,
-  serialized_end=2027,
+  serialized_start=1582,
+  serialized_end=1622,
 )
 
 _OPENCONNECTIONREQUEST_INFOENTRY.containing_type = _OPENCONNECTIONREQUEST
@@ -1011,8 +854,6 @@ _CONNECTIONSYNCREQUEST.fields_by_name['conn_props'].message_type = common__pb2._
 _EXECUTEREQUEST.fields_by_name['statementHandle'].message_type = common__pb2._STATEMENTHANDLE
 _EXECUTEREQUEST.fields_by_name['parameter_values'].message_type = common__pb2._TYPEDVALUE
 _SYNCRESULTSREQUEST.fields_by_name['state'].message_type = common__pb2._QUERYSTATE
-_UPDATEBATCH.fields_by_name['parameter_values'].message_type = common__pb2._TYPEDVALUE
-_EXECUTEBATCHREQUEST.fields_by_name['updates'].message_type = _UPDATEBATCH
 DESCRIPTOR.message_types_by_name['CatalogsRequest'] = _CATALOGSREQUEST
 DESCRIPTOR.message_types_by_name['DatabasePropertyRequest'] = _DATABASEPROPERTYREQUEST
 DESCRIPTOR.message_types_by_name['SchemasRequest'] = _SCHEMASREQUEST
@@ -1032,9 +873,7 @@ DESCRIPTOR.message_types_by_name['ExecuteRequest'] = _EXECUTEREQUEST
 DESCRIPTOR.message_types_by_name['SyncResultsRequest'] = _SYNCRESULTSREQUEST
 DESCRIPTOR.message_types_by_name['CommitRequest'] = _COMMITREQUEST
 DESCRIPTOR.message_types_by_name['RollbackRequest'] = _ROLLBACKREQUEST
-DESCRIPTOR.message_types_by_name['PrepareAndExecuteBatchRequest'] = _PREPAREANDEXECUTEBATCHREQUEST
-DESCRIPTOR.message_types_by_name['UpdateBatch'] = _UPDATEBATCH
-DESCRIPTOR.message_types_by_name['ExecuteBatchRequest'] = _EXECUTEBATCHREQUEST
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CatalogsRequest = _reflection.GeneratedProtocolMessageType('CatalogsRequest', (_message.Message,), dict(
   DESCRIPTOR = _CATALOGSREQUEST,
@@ -1177,30 +1016,7 @@ RollbackRequest = _reflection.GeneratedProtocolMessageType('RollbackRequest', (_
   ))
 _sym_db.RegisterMessage(RollbackRequest)
 
-PrepareAndExecuteBatchRequest = _reflection.GeneratedProtocolMessageType('PrepareAndExecuteBatchRequest', (_message.Message,), dict(
-  DESCRIPTOR = _PREPAREANDEXECUTEBATCHREQUEST,
-  __module__ = 'requests_pb2'
-  # @@protoc_insertion_point(class_scope:PrepareAndExecuteBatchRequest)
-  ))
-_sym_db.RegisterMessage(PrepareAndExecuteBatchRequest)
 
-UpdateBatch = _reflection.GeneratedProtocolMessageType('UpdateBatch', (_message.Message,), dict(
-  DESCRIPTOR = _UPDATEBATCH,
-  __module__ = 'requests_pb2'
-  # @@protoc_insertion_point(class_scope:UpdateBatch)
-  ))
-_sym_db.RegisterMessage(UpdateBatch)
-
-ExecuteBatchRequest = _reflection.GeneratedProtocolMessageType('ExecuteBatchRequest', (_message.Message,), dict(
-  DESCRIPTOR = _EXECUTEBATCHREQUEST,
-  __module__ = 'requests_pb2'
-  # @@protoc_insertion_point(class_scope:ExecuteBatchRequest)
-  ))
-_sym_db.RegisterMessage(ExecuteBatchRequest)
-
-
-DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n org.apache.calcite.avatica.proto'))
-_OPENCONNECTIONREQUEST_INFOENTRY.has_options = True
-_OPENCONNECTIONREQUEST_INFOENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+DESCRIPTOR._options = None
+_OPENCONNECTIONREQUEST_INFOENTRY._options = None
 # @@protoc_insertion_point(module_scope)

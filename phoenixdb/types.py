@@ -143,7 +143,6 @@ JAVA_CLASSES = {
     'string_value': [
         ('java.lang.Character', common_pb2.CHARACTER, None, None),
         ('java.lang.String', common_pb2.STRING, None, None),
-        ('java.math.BigDecimal', common_pb2.BIG_DECIMAL, str, Decimal),
     ],
     'number_value': [
         ('java.lang.Integer', common_pb2.INTEGER, None, int),
@@ -161,6 +160,7 @@ JAVA_CLASSES = {
         # if common_pb2.FLOAT is used, incorrect values are sent
         ('java.lang.Float', common_pb2.DOUBLE, float, float),
         ('java.lang.Double', common_pb2.DOUBLE, float, float),
+        ('java.math.BigDecimal', common_pb2.BIG_DECIMAL, str, Decimal),
     ]
 }
 """Groups of Java classes."""

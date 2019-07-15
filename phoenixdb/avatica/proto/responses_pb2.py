@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -20,10 +19,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='responses.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0fresponses.proto\x1a\x0c\x63ommon.proto\"\xc9\x01\n\x11ResultSetResponse\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\x12\x15\n\rown_statement\x18\x03 \x01(\x08\x12\x1d\n\tsignature\x18\x04 \x01(\x0b\x32\n.Signature\x12\x1b\n\x0b\x66irst_frame\x18\x05 \x01(\x0b\x32\x06.Frame\x12\x14\n\x0cupdate_count\x18\x06 \x01(\x04\x12\x1e\n\x08metadata\x18\x07 \x01(\x0b\x32\x0c.RpcMetadata\"q\n\x0f\x45xecuteResponse\x12#\n\x07results\x18\x01 \x03(\x0b\x32\x12.ResultSetResponse\x12\x19\n\x11missing_statement\x18\x02 \x01(\x08\x12\x1e\n\x08metadata\x18\x03 \x01(\x0b\x32\x0c.RpcMetadata\"V\n\x0fPrepareResponse\x12#\n\tstatement\x18\x01 \x01(\x0b\x32\x10.StatementHandle\x12\x1e\n\x08metadata\x18\x02 \x01(\x0b\x32\x0c.RpcMetadata\"z\n\rFetchResponse\x12\x15\n\x05\x66rame\x18\x01 \x01(\x0b\x32\x06.Frame\x12\x19\n\x11missing_statement\x18\x02 \x01(\x08\x12\x17\n\x0fmissing_results\x18\x03 \x01(\x08\x12\x1e\n\x08metadata\x18\x04 \x01(\x0b\x32\x0c.RpcMetadata\"f\n\x17\x43reateStatementResponse\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\x12\x1e\n\x08metadata\x18\x03 \x01(\x0b\x32\x0c.RpcMetadata\"8\n\x16\x43loseStatementResponse\x12\x1e\n\x08metadata\x18\x01 \x01(\x0b\x32\x0c.RpcMetadata\"8\n\x16OpenConnectionResponse\x12\x1e\n\x08metadata\x18\x01 \x01(\x0b\x32\x0c.RpcMetadata\"9\n\x17\x43loseConnectionResponse\x12\x1e\n\x08metadata\x18\x01 \x01(\x0b\x32\x0c.RpcMetadata\"c\n\x16\x43onnectionSyncResponse\x12)\n\nconn_props\x18\x01 \x01(\x0b\x32\x15.ConnectionProperties\x12\x1e\n\x08metadata\x18\x02 \x01(\x0b\x32\x0c.RpcMetadata\"u\n\x17\x44\x61tabasePropertyElement\x12\x1e\n\x03key\x18\x01 \x01(\x0b\x32\x11.DatabaseProperty\x12\x1a\n\x05value\x18\x02 \x01(\x0b\x32\x0b.TypedValue\x12\x1e\n\x08metadata\x18\x03 \x01(\x0b\x32\x0c.RpcMetadata\"c\n\x18\x44\x61tabasePropertyResponse\x12\'\n\x05props\x18\x01 \x03(\x0b\x32\x18.DatabasePropertyElement\x12\x1e\n\x08metadata\x18\x02 \x01(\x0b\x32\x0c.RpcMetadata\"\xb6\x01\n\rErrorResponse\x12\x12\n\nexceptions\x18\x01 \x03(\t\x12\x16\n\x0ehas_exceptions\x18\x07 \x01(\x08\x12\x15\n\rerror_message\x18\x02 \x01(\t\x12\x1b\n\x08severity\x18\x03 \x01(\x0e\x32\t.Severity\x12\x12\n\nerror_code\x18\x04 \x01(\r\x12\x11\n\tsql_state\x18\x05 \x01(\t\x12\x1e\n\x08metadata\x18\x06 \x01(\x0b\x32\x0c.RpcMetadata\"f\n\x13SyncResultsResponse\x12\x19\n\x11missing_statement\x18\x01 \x01(\x08\x12\x14\n\x0cmore_results\x18\x02 \x01(\x08\x12\x1e\n\x08metadata\x18\x03 \x01(\x0b\x32\x0c.RpcMetadata\"%\n\x0bRpcMetadata\x12\x16\n\x0eserver_address\x18\x01 \x01(\t\"\x10\n\x0e\x43ommitResponse\"\x12\n\x10RollbackResponse\"\x95\x01\n\x14\x45xecuteBatchResponse\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\x12\x15\n\rupdate_counts\x18\x03 \x03(\x04\x12\x19\n\x11missing_statement\x18\x04 \x01(\x08\x12\x1e\n\x08metadata\x18\x05 \x01(\x0b\x32\x0c.RpcMetadataB\"\n org.apache.calcite.avatica.protob\x06proto3')
+  serialized_options=_b('\n org.apache.calcite.avatica.proto'),
+  serialized_pb=_b('\n\x0fresponses.proto\x1a\x0c\x63ommon.proto\"\xc9\x01\n\x11ResultSetResponse\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\x12\x15\n\rown_statement\x18\x03 \x01(\x08\x12\x1d\n\tsignature\x18\x04 \x01(\x0b\x32\n.Signature\x12\x1b\n\x0b\x66irst_frame\x18\x05 \x01(\x0b\x32\x06.Frame\x12\x14\n\x0cupdate_count\x18\x06 \x01(\x04\x12\x1e\n\x08metadata\x18\x07 \x01(\x0b\x32\x0c.RpcMetadata\"q\n\x0f\x45xecuteResponse\x12#\n\x07results\x18\x01 \x03(\x0b\x32\x12.ResultSetResponse\x12\x19\n\x11missing_statement\x18\x02 \x01(\x08\x12\x1e\n\x08metadata\x18\x03 \x01(\x0b\x32\x0c.RpcMetadata\"V\n\x0fPrepareResponse\x12#\n\tstatement\x18\x01 \x01(\x0b\x32\x10.StatementHandle\x12\x1e\n\x08metadata\x18\x02 \x01(\x0b\x32\x0c.RpcMetadata\"z\n\rFetchResponse\x12\x15\n\x05\x66rame\x18\x01 \x01(\x0b\x32\x06.Frame\x12\x19\n\x11missing_statement\x18\x02 \x01(\x08\x12\x17\n\x0fmissing_results\x18\x03 \x01(\x08\x12\x1e\n\x08metadata\x18\x04 \x01(\x0b\x32\x0c.RpcMetadata\"f\n\x17\x43reateStatementResponse\x12\x15\n\rconnection_id\x18\x01 \x01(\t\x12\x14\n\x0cstatement_id\x18\x02 \x01(\r\x12\x1e\n\x08metadata\x18\x03 \x01(\x0b\x32\x0c.RpcMetadata\"8\n\x16\x43loseStatementResponse\x12\x1e\n\x08metadata\x18\x01 \x01(\x0b\x32\x0c.RpcMetadata\"8\n\x16OpenConnectionResponse\x12\x1e\n\x08metadata\x18\x01 \x01(\x0b\x32\x0c.RpcMetadata\"9\n\x17\x43loseConnectionResponse\x12\x1e\n\x08metadata\x18\x01 \x01(\x0b\x32\x0c.RpcMetadata\"c\n\x16\x43onnectionSyncResponse\x12)\n\nconn_props\x18\x01 \x01(\x0b\x32\x15.ConnectionProperties\x12\x1e\n\x08metadata\x18\x02 \x01(\x0b\x32\x0c.RpcMetadata\"u\n\x17\x44\x61tabasePropertyElement\x12\x1e\n\x03key\x18\x01 \x01(\x0b\x32\x11.DatabaseProperty\x12\x1a\n\x05value\x18\x02 \x01(\x0b\x32\x0b.TypedValue\x12\x1e\n\x08metadata\x18\x03 \x01(\x0b\x32\x0c.RpcMetadata\"c\n\x18\x44\x61tabasePropertyResponse\x12\'\n\x05props\x18\x01 \x03(\x0b\x32\x18.DatabasePropertyElement\x12\x1e\n\x08metadata\x18\x02 \x01(\x0b\x32\x0c.RpcMetadata\"\xb6\x01\n\rErrorResponse\x12\x12\n\nexceptions\x18\x01 \x03(\t\x12\x16\n\x0ehas_exceptions\x18\x07 \x01(\x08\x12\x15\n\rerror_message\x18\x02 \x01(\t\x12\x1b\n\x08severity\x18\x03 \x01(\x0e\x32\t.Severity\x12\x12\n\nerror_code\x18\x04 \x01(\r\x12\x11\n\tsql_state\x18\x05 \x01(\t\x12\x1e\n\x08metadata\x18\x06 \x01(\x0b\x32\x0c.RpcMetadata\"f\n\x13SyncResultsResponse\x12\x19\n\x11missing_statement\x18\x01 \x01(\x08\x12\x14\n\x0cmore_results\x18\x02 \x01(\x08\x12\x1e\n\x08metadata\x18\x03 \x01(\x0b\x32\x0c.RpcMetadata\"%\n\x0bRpcMetadata\x12\x16\n\x0eserver_address\x18\x01 \x01(\t\"\x10\n\x0e\x43ommitResponse\"\x12\n\x10RollbackResponseB\"\n org.apache.calcite.avatica.protob\x06proto3')
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -41,56 +40,56 @@ _RESULTSETRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='statement_id', full_name='ResultSetResponse.statement_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='own_statement', full_name='ResultSetResponse.own_statement', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='signature', full_name='ResultSetResponse.signature', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='first_frame', full_name='ResultSetResponse.first_frame', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='update_count', full_name='ResultSetResponse.update_count', index=5,
       number=6, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='metadata', full_name='ResultSetResponse.metadata', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -114,28 +113,28 @@ _EXECUTERESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='missing_statement', full_name='ExecuteResponse.missing_statement', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='metadata', full_name='ExecuteResponse.metadata', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -159,21 +158,21 @@ _PREPARERESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='metadata', full_name='PrepareResponse.metadata', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -197,35 +196,35 @@ _FETCHRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='missing_statement', full_name='FetchResponse.missing_statement', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='missing_results', full_name='FetchResponse.missing_results', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='metadata', full_name='FetchResponse.metadata', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -249,28 +248,28 @@ _CREATESTATEMENTRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='statement_id', full_name='CreateStatementResponse.statement_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='metadata', full_name='CreateStatementResponse.metadata', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -294,14 +293,14 @@ _CLOSESTATEMENTRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -325,14 +324,14 @@ _OPENCONNECTIONRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -356,14 +355,14 @@ _CLOSECONNECTIONRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -387,21 +386,21 @@ _CONNECTIONSYNCRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='metadata', full_name='ConnectionSyncResponse.metadata', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -425,28 +424,28 @@ _DATABASEPROPERTYELEMENT = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='value', full_name='DatabasePropertyElement.value', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='metadata', full_name='DatabasePropertyElement.metadata', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -470,21 +469,21 @@ _DATABASEPROPERTYRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='metadata', full_name='DatabasePropertyResponse.metadata', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -508,56 +507,56 @@ _ERRORRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='has_exceptions', full_name='ErrorResponse.has_exceptions', index=1,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='error_message', full_name='ErrorResponse.error_message', index=2,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='severity', full_name='ErrorResponse.severity', index=3,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='error_code', full_name='ErrorResponse.error_code', index=4,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='sql_state', full_name='ErrorResponse.sql_state', index=5,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='metadata', full_name='ErrorResponse.metadata', index=6,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -581,28 +580,28 @@ _SYNCRESULTSRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='more_results', full_name='SyncResultsResponse.more_results', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='metadata', full_name='SyncResultsResponse.metadata', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -626,14 +625,14 @@ _RPCMETADATA = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -657,7 +656,7 @@ _COMMITRESPONSE = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -681,7 +680,7 @@ _ROLLBACKRESPONSE = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -689,65 +688,6 @@ _ROLLBACKRESPONSE = _descriptor.Descriptor(
   ],
   serialized_start=1510,
   serialized_end=1528,
-)
-
-
-_EXECUTEBATCHRESPONSE = _descriptor.Descriptor(
-  name='ExecuteBatchResponse',
-  full_name='ExecuteBatchResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='connection_id', full_name='ExecuteBatchResponse.connection_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='statement_id', full_name='ExecuteBatchResponse.statement_id', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='update_counts', full_name='ExecuteBatchResponse.update_counts', index=2,
-      number=3, type=4, cpp_type=4, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='missing_statement', full_name='ExecuteBatchResponse.missing_statement', index=3,
-      number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='metadata', full_name='ExecuteBatchResponse.metadata', index=4,
-      number=5, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1531,
-  serialized_end=1680,
 )
 
 _RESULTSETRESPONSE.fields_by_name['signature'].message_type = common__pb2._SIGNATURE
@@ -773,7 +713,6 @@ _DATABASEPROPERTYRESPONSE.fields_by_name['metadata'].message_type = _RPCMETADATA
 _ERRORRESPONSE.fields_by_name['severity'].enum_type = common__pb2._SEVERITY
 _ERRORRESPONSE.fields_by_name['metadata'].message_type = _RPCMETADATA
 _SYNCRESULTSRESPONSE.fields_by_name['metadata'].message_type = _RPCMETADATA
-_EXECUTEBATCHRESPONSE.fields_by_name['metadata'].message_type = _RPCMETADATA
 DESCRIPTOR.message_types_by_name['ResultSetResponse'] = _RESULTSETRESPONSE
 DESCRIPTOR.message_types_by_name['ExecuteResponse'] = _EXECUTERESPONSE
 DESCRIPTOR.message_types_by_name['PrepareResponse'] = _PREPARERESPONSE
@@ -790,7 +729,7 @@ DESCRIPTOR.message_types_by_name['SyncResultsResponse'] = _SYNCRESULTSRESPONSE
 DESCRIPTOR.message_types_by_name['RpcMetadata'] = _RPCMETADATA
 DESCRIPTOR.message_types_by_name['CommitResponse'] = _COMMITRESPONSE
 DESCRIPTOR.message_types_by_name['RollbackResponse'] = _ROLLBACKRESPONSE
-DESCRIPTOR.message_types_by_name['ExecuteBatchResponse'] = _EXECUTEBATCHRESPONSE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ResultSetResponse = _reflection.GeneratedProtocolMessageType('ResultSetResponse', (_message.Message,), dict(
   DESCRIPTOR = _RESULTSETRESPONSE,
@@ -904,14 +843,6 @@ RollbackResponse = _reflection.GeneratedProtocolMessageType('RollbackResponse', 
   ))
 _sym_db.RegisterMessage(RollbackResponse)
 
-ExecuteBatchResponse = _reflection.GeneratedProtocolMessageType('ExecuteBatchResponse', (_message.Message,), dict(
-  DESCRIPTOR = _EXECUTEBATCHRESPONSE,
-  __module__ = 'responses_pb2'
-  # @@protoc_insertion_point(class_scope:ExecuteBatchResponse)
-  ))
-_sym_db.RegisterMessage(ExecuteBatchResponse)
 
-
-DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n org.apache.calcite.avatica.proto'))
+DESCRIPTOR._options = None
 # @@protoc_insertion_point(module_scope)

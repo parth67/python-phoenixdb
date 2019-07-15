@@ -15,6 +15,7 @@
 """Implementation of the JSON-over-HTTP RPC protocol used by Avatica."""
 
 import re
+import sys
 import socket
 import pprint
 import math
@@ -372,7 +373,7 @@ class AvaticaClient(object):
 
         self._apply(request)
 
-    def prepare_and_execute(self, connection_id, statement_id, sql, max_rows_total=None, first_frame_max_size=None):
+    def prepare_and_execute(self, connection_id, statement_id, sql, max_rows_total=None):
         """Prepares and immediately executes a statement.
 
         :param connection_id:
@@ -397,14 +398,17 @@ class AvaticaClient(object):
         request.connection_id = connection_id
         request.statement_id = statement_id
         request.sql = sql
-        if max_rows_total is not None:
-            request.max_rows_total = max_rows_total
-        if first_frame_max_size is not None:
-            request.first_frame_max_size = first_frame_max_size
+        request.max_row_count = sys.maxint if max_rows_total is None else max_rows_total
+        #if max_rows_total is not None:
+            #request.max_rows_total = max_rows_total
+            #request.max_row_count = max_rows_total
+        # if first_frame_max_size is not None:
+        #     request.max_row_count = 2
 
         response_data = self._apply(request, 'ExecuteResponse')
         response = responses_pb2.ExecuteResponse()
         response.ParseFromString(response_data)
+        
         return response.results
 
     def prepare(self, connection_id, sql, max_rows_total=None):
@@ -425,15 +429,14 @@ class AvaticaClient(object):
         request = requests_pb2.PrepareRequest()
         request.connection_id = connection_id
         request.sql = sql
-        if max_rows_total is not None:
-            request.max_rows_total = max_rows_total
+        request.max_row_count = sys.maxint if max_rows_total is None else max_rows_total
 
         response_data = self._apply(request)
         response = responses_pb2.PrepareResponse()
         response.ParseFromString(response_data)
         return response.statement
 
-    def execute(self, connection_id, statement_id, signature, parameter_values=None, first_frame_max_size=None):
+    def execute(self, connection_id, statement_id, signature, parameter_values=None, max_rows_total=None):
         """Returns a frame of rows.
 
         The frame describes whether there may be another frame. If there is not
@@ -465,9 +468,12 @@ class AvaticaClient(object):
         if parameter_values is not None:
             request.parameter_values.extend(parameter_values)
             request.has_parameter_values = True
-        if first_frame_max_size is not None:
-            request.deprecated_first_frame_max_size = first_frame_max_size
-            request.first_frame_max_size = first_frame_max_size
+        
+        request.max_row_count = sys.maxint if max_rows_total is None else max_rows_total
+
+        #if first_frame_max_size is not None:
+        #    request.deprecated_first_frame_max_size = first_frame_max_size
+        #    request.first_frame_max_size = first_frame_max_size
 
         response_data = self._apply(request)
         response = responses_pb2.ExecuteResponse()
@@ -501,7 +507,7 @@ class AvaticaClient(object):
         request.statement_id = statement_id
         request.offset = offset
         if frame_max_size is not None:
-            request.frame_max_size = frame_max_size
+            request.fetch_max_row_count = frame_max_size
 
         response_data = self._apply(request)
         response = responses_pb2.FetchResponse()

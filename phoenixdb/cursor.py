@@ -136,6 +136,7 @@ class Cursor(object):
             return
 
         for column in signature.columns:
+            print(column)
             dtype = TypeHelper.from_class(column.column_class_name)
             self._column_data_types.append(dtype)
 
@@ -201,7 +202,7 @@ class Cursor(object):
                 self._set_id(self._connection._client.create_statement(self._connection._id))
             results = self._connection._client.prepare_and_execute(
                 self._connection._id, self._id,
-                operation, first_frame_max_size=self.itersize)
+                operation)
             self._process_results(results)
         else:
             statement = self._connection._client.prepare(
