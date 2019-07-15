@@ -211,8 +211,7 @@ class Cursor(object):
 
             results = self._connection._client.execute(
                 self._connection._id, self._id,
-                statement.signature, self._transform_parameters(parameters),
-                first_frame_max_size=self.itersize)
+                statement.signature, self._transform_parameters(parameters))
             self._process_results(results)
 
     def executemany(self, operation, seq_of_parameters):
@@ -227,8 +226,7 @@ class Cursor(object):
         for parameters in seq_of_parameters:
             self._connection._client.execute(
                 self._connection._id, self._id,
-                statement.signature, self._transform_parameters(parameters),
-                first_frame_max_size=0)
+                statement.signature, self._transform_parameters(parameters))
 
     def _transform_row(self, row):
         """Transforms a Row into Python values.
